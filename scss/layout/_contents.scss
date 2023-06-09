@@ -1,0 +1,115 @@
+.l-contents{
+	width: 100%;
+	height: auto;
+	&.-w1200{
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	&.-w1050{
+		width: 100%;
+		max-width: 1050px;
+		margin: auto;
+	}
+	&.-w93-s{
+		@include mq(sp){
+			width: 93%;
+		}
+	}
+	&.-img{// 背景画像のみ
+		width: 100%;
+		height: auto;
+	}
+	&.-img-bg{// 背景画像＋コンテンツ
+		position: relative;
+		.imgBox{// 背景画像
+			width: 100%;
+			height: auto;
+		}
+		.l-contentsBox{// コンテンツ要素
+			width: 100%;
+			position: absolute;
+			.l-contentsBox--wrapper{
+				width: 100%;
+				height: auto;
+				@include mq(tb){
+					width: 100%;
+					max-width: 1315px;
+					margin: auto;
+				}
+			}
+			&.-kukaku,
+			&.-location-trainBox,
+			&.-builtPlanText,
+			&.-setsubiText{
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&.-top-op{
+				top: 81%;
+				left: 22%;
+				transform: translate(-50%, -50%);
+				width: 38%;
+				@include mq(tb){
+					top: 88%;
+					left: 18%;
+					width: 33%;
+				}
+				@include mq(pc){
+					top: 81%;
+					left: 5%;
+					width: 38%;
+				}
+			}
+			&.-built-op{
+				top: 71%;
+				left: 38%;
+				transform: translate(-50%, -50%);
+				width: 74%;
+				@include mq(tb){
+					top: 65%;
+					left: 28%;
+					width: 50%;
+				}
+				@include mq(pc){
+				    top: 68%;
+					left: 22%;
+					width: 50%;
+				}
+			}
+			&.-built-textArea{
+				@include mq(tb){
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		&.-pc80{
+			width: 80%;
+			margin: auto;
+			@include mq(tb){
+				width: 45%;
+
+			}
+		}
+	}
+	// 基本的にSliderは、「Slick or Swiper」を使用すること
+	// 場所：「Scss/introduction内」
+	&.-slider{
+		//下記スマホ以上
+		@include mq(tb){
+		}
+	}
+	&.-textArea{
+		width: 90%;
+		height: auto;
+		@include mq(tb){
+			width: 100%;
+		}
+	}
+}
+

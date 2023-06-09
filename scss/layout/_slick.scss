@@ -1,0 +1,98 @@
+
+.l-slider {
+    // 周辺環境
+    .location-slider{
+        .slick-img{
+            @include mq(sp){
+                width: 100vw !important;
+                padding: 0 3.5vw;
+            }
+            @include mq(tb){
+                padding: 0 10px;
+            }
+            @include mq(pc){
+            }
+        }
+    }
+    // 新築分譲住宅
+    .built-slider{
+        @include mq(sp){
+            // padding-bottom: 1vh;
+        }
+        .slick-img{
+            img{
+                margin-bottom: .5vh;
+            }
+            @include mq(sp){
+                // width: 100vw !important;
+                margin: 0 10px;
+            }
+            @include mq(tb){
+                // width: 33.3333% !important;
+                padding: 0 10px;
+            }
+            @include mq(pc){
+            }
+        }
+    }
+}
+.slide-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+}
+.prev-arrow{
+    left: -40px;
+    width: 0;
+    height: 0;
+    background: white;
+    border-left: 0 solid white;
+    border-right: 15px solid #333;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    transition: .5s all;
+    &:hover{
+        border-right: 15px solid $site-color01;
+    }
+}
+.next-arrow{
+    right: -40px;
+    width: 0;
+    height: 0;
+    background: white;
+    border-right: 0 solid white;
+    border-left: 15px solid #333;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    transition: .5s all;
+    &:hover{
+        border-left: 15px solid $site-color01;
+    }
+}
+
+.slick-dots{
+    li{
+        button{
+            &:before {
+                transition: .3s all;
+                @include mq(tb){
+                    font-size: 17px !important;
+                    width: 44px !important;
+                    height: 44px !important;
+                }
+            }
+            &:hover{
+                &:before {
+                    color: $site-color01 !important;
+                }
+            }
+        }
+    }
+}
+.slick-active{
+    button{
+        &:before {
+            color: $site-color01 !important;
+        }
+    }
+}
