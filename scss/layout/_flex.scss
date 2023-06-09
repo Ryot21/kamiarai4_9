@@ -2,6 +2,25 @@
 .l-flex--area{
 	height: 100%;
 	.l-flex--contents{
+		&.-f01{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(sp){
+					padding: 0 10%;
+				}
+				@include mq(tb){
+					width: 48%;
+				}
+			}
+		}
 
 		&.-header-top{
 			display: flex;
@@ -56,12 +75,12 @@
 			justify-content: space-evenly;
 			align-items: center;
 		}
-		&.-header-contactArea{
+		&.-header-contactArea,
+		&.-footer-contactArea{
 			display: flex;
 			flex-wrap: nowrap;
 			align-items: center;
 			border: 1px solid $site-color01;
-			// border: 1px solid black;
 			.flexItem{
 				width: 50%;
 				a{
@@ -101,113 +120,26 @@
 			}
 		}
 
-		&.-flexView{
-			display: flex;
-			@include mq(sp){
-				flex-direction: column;
-			}
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-around;
-			}
-			.flexItem{
-				&.-textArea{
-					@include mq(sp){
-						padding: 0 3%;
-					}
-					@include mq(tb){
-						width: 40%;
-						padding: 0 0 0 2%;
-					}
-					@include mq(tb-pc1200){
-						padding: 0;
-					}
-					.title{
-						color: $site-color01;
-					}
-					.des-box{
-						@include mq(tb){
-						    padding: 0 2% 0 10%;
-						}
-						&.-fuzimiPark{
-							@include mq(tb){
-								.toho{
-									padding-right: 30%;
-								}
-							}
-						}
-					}
-				}
-				&.-picArea{
-					@include mq(tb){
-						width: 60%;
-					}
-					.pic-inner{
-						@include mq(tb){
-							width: auto;
-							height: 90%;
-							overflow: hidden;
-						}
-					}
-				}
-			}
-			&.-p02{
-				@include mq(tb){
-					display: flex;
-					flex-wrap: nowrap;
-					justify-content: space-around;
-				}
-				.flexItem{
-					&.-textArea{
-						@include mq(sp){
-							padding: 0 5%;
-							order: 2;
-						}
-						@include mq(tb){
-							width: 48%;
-							padding: 0 5% 0 0 !important;
-						}
-						@include mq(tb-pc1200){
-							// padding: 0;
-						}
-						.title{
-							color: black;
-							letter-spacing: -1px;
-						}
-						.btm-pic{
-							@include mq(tb){
-								margin: 5% 23%;
-							}
-						}
-						.des-box{
-						}
-					}
-					&.-picArea{
-						@include mq(sp){
-							order: 1;
-							margin-bottom: 5vh;
-						}
-						@include mq(tb){
-							width: 52%;
-						}
-						.pic-inner{
-							@include mq(tb){
-								width: auto;
-								height: 90%;
-								overflow: hidden;
-							}
-						}
-					}
-				}
-			}
-		}
+
 		&.-flexContent__box{
+			display: flex;
 			@include mq(sp){
-				display: flex;
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
 				flex-wrap: nowrap;
 			}
 			.flexItem{
 				@include mq(sp){
+					&:nth-child(1){
+						width: 100%;
+						// padding-right: 5%;
+					}
+					&:nth-child(2){
+						width: 100%;
+					}
+				}
+				@include mq(tb){
 					&:nth-child(1){
 						width: 60%;
 						padding-right: 5%;
@@ -218,243 +150,36 @@
 				}
 			}
 		}
-		&.-built--plan{
+		&.-flexContent__box02{
 			display: flex;
 			@include mq(sp){
-				flex-direction: column;
+				flex-wrap: wrap;
 			}
 			@include mq(tb){
 				flex-wrap: nowrap;
+				padding: 0 10%;
 			}
 			.flexItem{
-				width: 100%;
-				@include mq(tb){
+				@include mq(sp){
 					&:nth-child(1){
-						width: 65%;
+						width: 100%;
+						padding-right: 50%;
 					}
 					&:nth-child(2){
+						width: 100%;
+					}
+				}
+				@include mq(tb){
+					&:nth-child(1){
 						width: 35%;
-						padding-left: 1%;
-					}
-				}
-			}
-
-		}
-		&.-built--storagePlan{
-			display: flex;
-			flex-wrap: wrap;
-			width: 60%;
-			margin: auto;
-			.flexItem{
-				width: 100%;
-				@include mq(tb){
-					&:nth-child(1){
-						width: 50%;
-						padding-right: 1%;
-					}
-					&:nth-child(2){
-						width: 50%;
-						padding-left: 1%;
-					}
-				}
-			}
-		}
-		&.-built--siding{
-			display: flex;
-			flex-wrap: wrap;
-			margin: auto;
-			@include mq(tb){
-				flex-wrap: nowrap;
-			}
-			.flexItem{
-				@include mq(sp){
-					&:nth-child(1){
-						width: 50%;
-						padding-right: 1%;
-					}
-					&:nth-child(2){
-						width: 50%;
-						padding-left: 1%;
-					}
-					&:nth-child(3){
-						width: 100%;
-						// padding-left: 1%;
-					}
-				}
-				@include mq(tb){
-					&:nth-child(1){
-						width: 33.3333%;
-						padding-right: 1%;
-					}
-					&:nth-child(2){
-						width: 33.3333%;
-						padding-left: 1%;
-					}
-					&:nth-child(3){
-						width: 33.3333%;
-    					padding-top: 4vh;
-						padding-left: 1%;
-					}
-				}
-			}
-		}
-		&.-setsubi-titleArea{
-			display: flex;
-			@include mq(sp){
-				flex-direction: column;
-			}
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-around;
-			}
-			.flexItem{
-				&:nth-child(1){
-					width: 82%;
-					@include mq(sp){
-						width: 100%;
-					}
-				}
-				&:nth-child(2){
-					width: 18%;
-					@include mq(sp){
-						width: 30%;
-						margin-left: auto;
-					}
-				}
-			}
-			&.-v02{
-				.flexItem{
-					&:nth-child(1){
-						width: 85%;
-						@include mq(sp){
-							width: 100%;
-						}
-					}
-					&:nth-child(2){
-						width: 15%;
-						@include mq(sp){
-							width: 28%;
-							margin-left: auto;
-						}
-					}
-				}
-			}
-		}
-		&.-setsubi-itemArea{
-			display: flex;
-			flex-wrap: wrap;
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-between;
-			}
-			.flexItem{
-				width: 30%;
-				&:nth-child(1){
-					@include mq(sp){
-						width: 100%;
-					}
-				}
-				&:nth-child(2){
-					@include mq(sp){
-						width: 50%;
-						padding-right: .5%;
-					}
-				}
-				&:nth-child(3){
-					@include mq(sp){
-						width: 50%;
-						padding-left: .5%;
-					}
-				}
-			}
-		}
-		&.-setsubi-itemArea02{
-			display: flex;
-			@include mq(sp){
-				flex-direction: column;
-			}
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-between;
-			}
-			.flexItem{
-				&:nth-child(1){
-					width: 70%;
-					padding-right: 5%;
-					@include mq(sp){
-						width: 100%;
-						padding-right: 0 !important;
-					}
-				}
-				&:nth-child(2){
-					width: 30%;
-					@include mq(sp){
-						width: 100%;
-						
-					}
-				}
-			}
-		}
-		&.-setsubi-itemArea03{
-			display: flex;
-			@include mq(sp){
-				// flex-direction: column;
-			}
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-between;
-			}
-			.flexItem{
-				&.-leftBox{
-					width: 30%;
-					padding-right: 2%;
-					@include mq(sp){
-						width: 50%;
-						// padding-right: 0 !important;
-					}
-				}
-				&.-rightBox{
-					width: 70%;
-					// padding-right: 5%;
-					@include mq(sp){
-						width: 50%;
-						// padding-right: 0 !important;
-					}
-				}
-			}
-		}
-		&.-setsubi-itemArea03_01{//１行目
-			display: flex;
-			@include mq(sp){
-				flex-direction: column;
-			}
-			@include mq(tb){
-				flex-wrap: nowrap;
-				justify-content: space-between;
-			}
-			.flexItem{
-				width: 100%;
-				&:nth-child(1){
-					padding-right: 0;
-					@include mq(tb){
-						width: 40%;
 						padding-right: 5%;
 					}
-				}
-				&:nth-child(2){
-					@include mq(tb){
-						width: 60%;
+					&:nth-child(2){
+						width: 75%;
 					}
 				}
-				&.-w{
-					width: 100%;
-				}
 			}
-
-
 		}
-
-
 
 
 

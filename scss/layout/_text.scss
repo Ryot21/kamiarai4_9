@@ -1,6 +1,6 @@
 
 .l-text{
-    line-height: 1.7;
+    line-height: 1.5;
     &.-lh-1{
         line-height: 1;
     }
@@ -14,11 +14,19 @@
             line-height: 1.5;
         }
     }
+    &.-lh-12{
+        line-height: 1.2;
+    }
     &.-lh-2{
         line-height: 2;
     }
     &.-lh-25{
         line-height: 2.5;
+    }
+    &.-lts-8{
+        @include mq(tb){
+            letter-spacing: 8px;
+        }
     }
 
         // 大きさ
@@ -82,7 +90,7 @@
                 }
             }
         }
-        &.-size3L{//35px
+        &.-size3L{
             font-size: 20px;
             &.-s30{
                 @include mq(sp){
@@ -98,7 +106,7 @@
                 font-size: 2.5rem;
             }
             @include mq(tb-pc1400){
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
         }
         &.-size4L{//48px
@@ -173,9 +181,9 @@
         // font-style: normal;
     }
     &.-family04{//garamond
-        // font-family: "garamond-premier-pro-display", serif;
-        // font-weight: 500;
-        // font-style: italic;
+        font-family: "garamond-premier-pro-display", serif;
+        font-weight: 400;
+        font-style: normal;
     }
     &.-family05{//メイリオ
         // font-family:'メイリオ', 'Meiryo', sans-serif;

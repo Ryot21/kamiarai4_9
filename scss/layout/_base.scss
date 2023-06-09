@@ -58,6 +58,9 @@
 
 body{
 	animation: fadein 2s forwards;
+	@include mq(sp){
+		margin-bottom: 11vh;
+	}
 }
 img{
 	pointer-events: none;
@@ -128,6 +131,11 @@ img{
 .l-mgb_1_s{
 	@include mq(sp){
 		margin-bottom: 1vh !important;
+	}
+}
+.l-mgb_5_s{
+	@include mq(sp){
+		margin-bottom: 5vh !important;
 	}
 }
 .l-mgb_1{
