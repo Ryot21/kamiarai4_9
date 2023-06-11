@@ -23,6 +23,11 @@
     &.-lh-25{
         line-height: 2.5;
     }
+    &.-lts-2{
+        @include mq(tb){
+            letter-spacing: 2px;
+        }
+    }
     &.-lts-8{
         @include mq(tb){
             letter-spacing: 8px;
@@ -57,6 +62,7 @@
             @include mq(tb){
                 font-size: clamp(10px, 1.8vw, 24px);
             }
+
             &.-s15{
                 @include mq(sp){
                     font-size: 15px;
@@ -74,9 +80,24 @@
             @include mq(tb){
                 font-size: clamp(10px, 2.5vw, 28px);
             }
+            &.-s27{
+                @include mq(sp){
+                    font-size: 27px;
+                }
+            }
             &.-s24{
                 @include mq(sp){
                     font-size: 24px;
+                }
+            }
+            &.-s14{
+                @include mq(sp){
+                    font-size: 14px;
+                }
+            }
+            &.-s13{
+                @include mq(sp){
+                    font-size: 13px;
                 }
             }
             &.-s17{
@@ -91,7 +112,7 @@
             }
         }
         &.-size3L{
-            font-size: 20px;
+            font-size: 24px;
             &.-s30{
                 @include mq(sp){
                     font-size: 30px;
@@ -107,6 +128,25 @@
             }
             @include mq(tb-pc1400){
                 font-size: 3.5rem;
+            }
+        }
+        &.-size3L_2{
+            font-size: 24px;
+            &.-s30{
+                @include mq(sp){
+                    font-size: 30px;
+                }
+            }
+            &.-s32{
+                @include mq(sp){
+                    font-size: 32px;
+                }
+            }
+            @include mq(tb){
+                font-size: 2.5rem;
+            }
+            @include mq(tb-pc1400){
+                font-size: 2.5rem;
             }
         }
         &.-size4L{//48px
@@ -172,13 +212,13 @@
         font-weight: 300;
         font-style: normal;
     }
-    &.-family02{//遊ゴシック
-        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    &.-family02{//A1MinchoStd Bold代用
+        font-family: "yu-gothic-pr6n", sans-serif;
+        font-weight: 400;
+        font-style: normal;
     }
     &.-family03{//ゴシック
-        // font-family: "source-han-sans-japanese", sans-serif;
-        // font-weight: 700;
-        // font-style: normal;
+
     }
     &.-family04{//garamond
         font-family: "garamond-premier-pro-display", serif;
@@ -317,6 +357,7 @@
         }
     }
     &.-red{
+  
     }
     &.-blue{
     }
@@ -330,10 +371,106 @@
     &.-s-white{
         text-shadow: 2px 2px 3px white;
     }
+    &.-s-red{
+        // text-shadow: 2px 2px 3px $site-color01;
+        // filter: drop-shadow(0px 0px 1px #6D0000);
+    }
     &.-site-c{
         color: $site-color01;
         a{
             color: $site-color01;
+        }
+    }
+    .w-auto{
+        display: inline-block;
+        width: auto;
+        // ※
+        &.-komezirushi{
+            position: relative;
+            &::after{
+                content: "※リビングタウンとは4要素「暮らす・働く・学ぶ・遊ぶ」が揃う街";
+                position: absolute;
+                bottom: -60%;
+                left: 0%;
+
+                font-size: 1vw;
+                @include mq(tb){
+                    bottom: -40%;
+                }
+            }
+        }
+    }
+
+    // 西武池袋線
+    &.ikebukuro-sen{
+        position: relative;
+        @include mq(tb){
+            display: inline-block !important;
+        }
+        &::after{
+            content: "西武池袋線";
+            position: absolute;
+            top: -50%;
+            left: 9%;
+
+            font-size: 1vw;
+            @include mq(tb){
+                top: -28%;
+                left: 4%;
+                font-size: 1vw;
+            }
+            @include mq(pc){
+                top: -33%;
+                left: 4%;
+                font-size: 16px;
+
+            }
+        }
+    }
+    // 西武池袋線・新宿線
+    &.ikebukuro-shinzyuku-sen{
+        display: inline-block !important;
+        position: relative;
+        &::after{
+            content: "西武池袋･新宿線";
+            position: absolute;
+            top: -50%;
+            left: -6%;
+            width: 110%;
+            font-size: 1vw;
+            // width: 110%;
+            @include mq(sp){
+                width: 110%;
+                transform: scale(.7);
+            }
+            @include mq(tb){
+                top: -30%;
+                left: -8%;
+            }
+            @include mq(pc){
+                top: -33%;
+                left: 0%;
+                font-size: 16px;
+            }
+        }
+    }
+    // ドット
+    &.dots{
+        position: relative;
+        &::after{
+            content: "・・・・";
+            position: absolute;
+            top: -46%;
+            left: 7.6%;
+            font-size: 7.5vw;
+            @include mq(tb){
+                top: -54%;
+                left: 18%;
+                font-size: 3.25vw;
+            }
+            @include mq(pc){
+                font-size: 2.75vw;
+            }
         }
     }
 }

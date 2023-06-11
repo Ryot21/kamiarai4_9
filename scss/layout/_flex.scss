@@ -2,6 +2,14 @@
 .l-flex--area{
 	height: 100%;
 	.l-flex--contents{
+		&.-r{
+			flex-direction: row-reverse;
+		}
+		&.-r_pc{
+			@include mq(tb){
+				flex-direction: row-reverse;
+			}
+		}
 		&.-f01{
 			display: flex;
 			@include mq(sp){
@@ -13,11 +21,57 @@
 			}
 			.flexItem{
 				width: 100%;
-				@include mq(sp){
-					padding: 0 10%;
-				}
 				@include mq(tb){
-					width: 48%;
+					width: 50%;
+				}
+				&--nTitleArea{
+					position: relative;
+					padding-left: 25%;
+					@include mq(tb){
+						padding-left: 25%;
+					}
+					&::after{
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+
+						font-size: 17vw;
+						color: #C9CACA;
+						font-family: "garamond-premier-pro-display", serif;
+						font-weight: 400;
+						font-style: normal;
+						letter-spacing: 5px;
+						@include mq(tb){
+							font-size: 7vw;
+							font-style: italic;
+						}
+					}
+					&.-n01{
+						&::after{
+							content:"01";
+						}
+					}
+					&.-n02{
+						&::after{
+							content:"02";
+						}
+					}
+					&.-n03{
+						&::after{
+							content:"03";
+						}
+					}
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
 				}
 			}
 		}
@@ -181,6 +235,77 @@
 			}
 		}
 
+		&.-f-kukakuArea{
+			display: flex;
+			flex-wrap: nowrap;
+			flex-flow: column;
+			.flexItem{
+				width: 100%;
+				&.-concept-kukakuArea{
+					&-01{
+						@include mq(sp){
+
+						}
+						@include mq(tb){
+							order: 2;
+						}
+					}
+					&-02{
+						@include mq(sp){
+
+						}
+						@include mq(tb){
+							order: 1;
+						}
+					}
+					&-03{
+						order: 3;
+					}
+				}
+			}
+		}
+		&.-f-borderBox{
+			display: flex;
+			flex-wrap: wrap;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.flexItem{
+				// ボーダーボックス > タイトル
+				&.-b-titleArea{
+					height: 100%;
+					align-items: center;
+					@include mq(tb){
+						position: relative;
+						width: 25%;
+					}
+					&::after{ // 矢印
+						@include mq(tb){
+							content: "";
+							position: absolute;
+							top: 50%;
+							right: -3%;
+							transform: translateY(-50%);
+	
+							width: 0;
+							height: 0;
+							border-left: 15px solid #333333;
+							border-top: 15px solid transparent;
+							border-bottom: 15px solid transparent;
+						}
+					}
+				}
+				// ボーダーボックス > 内容
+				&.-b-textArea{
+					@include mq(tb){
+						width: 75%;
+						padding-left: 5%;
+					}
+				}
+			}
+		}
 
 
 

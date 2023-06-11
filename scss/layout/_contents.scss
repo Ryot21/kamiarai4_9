@@ -1,31 +1,44 @@
+.-w1200{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+.-w1050{
+	width: 100%;
+	max-width: 1050px;
+	margin: auto;
+}
+.-w750{
+	width: 100%;
+	max-width: 750px;
+	margin: auto;
+	padding: 0 15%;
+	@include mq(tb){
+		padding: 0 6%;
+	}
+}
+.-w93-s{
+	@include mq(sp){
+		width: 93% !important;
+	}
+}
+
+
+
 .l-contents{
 	display: block;
 	width: 100%;
 	height: auto;
-	&.-w1200{
+
+	// ボーダーボックス
+	&.-borderBox{
 		width: 100%;
-		max-width: 1200px;
-		margin: auto;
+		height: auto;
+		border: 1px solid black;
+		padding: 3vh 3vw;
+		align-items: center;
 	}
-	&.-w1050{
-		width: 100%;
-		max-width: 1050px;
-		margin: auto;
-	}
-	&.-w750{
-		width: 100%;
-		max-width: 750px;
-		margin: auto;
-		padding: 0 15%;
-		@include mq(tb){
-			padding: 0 6%;
-		}
-	}
-	&.-w93-s{
-		@include mq(sp){
-			width: 93% !important;
-		}
-	}
+	// バナーボックス
 	&.bannerBox{
 		.-bannerBtn{
 			transition: .5s all;
@@ -74,11 +87,6 @@
 					margin: auto;
 				}
 			}
-			&.-w1200{
-				width: 100%;
-				max-width: 1200px;
-				margin: auto;
-			}
 			&.-kukaku,
 			&.-location-trainBox,
 			&.-builtPlanText,
@@ -121,6 +129,35 @@
 				}
 			}
 
+			&.-concept-jyusekei{
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%);
+
+				width: auto;
+				@include mq(tb){
+					left: 37%;
+				}
+			}
+			&.-owners-voice{
+				top: 73%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				height: 100%;
+				@include mq(tb){
+					top: 75%;
+				}
+				&--title{
+					top: 5%;
+					left: 50%;
+					transform: translateX(-50%);
+					@include mq(tb){
+						top: 5%;
+					}
+				}
+			}
+
 			&.-bannerBtn__red{
 				background: white;
 				@include mq(tb){
@@ -151,6 +188,8 @@
 					border-radius: 30px;
 				}
 			}
+
+
 
 		}
 		&.-pc80{

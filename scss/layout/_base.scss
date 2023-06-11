@@ -133,6 +133,11 @@ img{
 		margin-bottom: 1vh !important;
 	}
 }
+.l-mgb_3_s{
+	@include mq(sp){
+		margin-bottom: 3vh !important;
+	}
+}
 .l-mgb_5_s{
 	@include mq(sp){
 		margin-bottom: 5vh !important;
@@ -180,6 +185,12 @@ img{
 		margin-bottom: 10vh !important;
 	}
 }
+.l-mgb_15{
+	margin-bottom: 8vh;
+	@include mq(tb){
+		margin-bottom: 15vh;
+	}
+}
 
 .l-mgb_or{
 	margin-bottom: 0.4vh;
@@ -217,4 +228,24 @@ img{
 	@include mq(tb){
 		padding-bottom: 10vh !important;
 	}
+}
+
+
+
+.l-pdb_1_s{
+	@include mq(sp){
+		padding-bottom: 1vh !important;
+	}
+}
+
+.l-mgl_3_s{
+	@include mq(sp){
+		margin-left: 3vw;
+	}
+}
+.l-mgl-_15{
+	margin-left: -1.5%;
+}
+.l-mgl-_4{
+	margin-left: -4%;
 }
