@@ -175,7 +175,7 @@
             </div>
             <!-- 「リビングタウン」化 -->
             <div class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
-                <h2 class="l-text -size3L -family01 -center -lh-12 l-mgb_5">
+                <h2 class="l-text -size3L -s20 -family01 -center -lh-12 l-mgb_5 -s_5">
                     <span class="w-auto -komezirushi">｢リビングタウン｣化で発展の再加速へ</span>
                 </h2>
                 <p class="l-text -sizeLL -s14 -family02 -site-c -center -lh-2 l-mgb_1 l-pdb_1_s border-btm">
@@ -200,7 +200,7 @@
                     <img class="pc" src="images/pic/concept-01_pic.jpg" alt="">
                 </div>
                 <div class="pc l-contentsBox -text">
-                    <img src="images/1x/concept-01_text.png" alt="">
+                    <img src="images/item/concept-01_text.png" alt="進化し続けるまち、所沢を住みこなす">
                 </div>
             </div>
             <div class="l-contents -img-bg -w1200 l-mgb_10 -s_5">
@@ -509,6 +509,55 @@
         </div>
     </div>
 
+            <!-- モーダル表示 -->
+            <div class="inline_modal">
+
+                <!-- vol.23 -->
+                <div id="danran1" class="danran">
+                    <img class="pc" src="images/danran/danran_23.jpg" alt="danran_vol_23 4ページ">
+                    <img class="sp" style="margin-bottom: 20px;" src="images/danran/danran_23_s1.jpg" alt="danran_vol_23 4ページ">
+                    <img class="sp" src="images/danran/danran_23_s2.jpg" alt="danran_vol_23 4ページ">
+                    <div>
+                        <button type="button" id="cboxClose_bottom_danran1" class="close_btn_area">
+                            <div class="square_btn">閉じる</div>
+                        </button>
+                    </div>
+                </div>
+                <!-- vol.22 -->
+                <div id="danran2" class="danran">
+                    <img class="pc" style="padding:10px;" src="images/danran/danran_22.jpg" alt="danran_vol_22 4ページ">
+                    <img class="sp" style="margin-bottom: 20px;" src="images/danran/danran_22_s1.jpg" alt="danran_vol_22 4ページ">
+                    <img class="sp" src="images/danran/danran_22_s2.jpg" alt="danran_vol_22 4ページ">
+                    <div>
+                        <button type="button" id="cboxClose_bottom_danran2" class="close_btn_area">
+                            <div class="square_btn">閉じる</div>
+                        </button>
+                    </div>
+                </div>
+                <!-- vol.20 -->
+                <div id="danran3" class="danran">
+                    <img class="pc" src="images/danran/danran_20.jpg" alt="danran_vol_20 4ページ">
+                    <img class="sp" style="margin-bottom: 20px;" src="images/danran/danran_20_s1.jpg" alt="danran_vol_20 4ページ">
+                    <img class="sp" src="images/danran/danran_20_s2.jpg" alt="danran_vol_20 4ページ">
+                    <div>
+                        <button type="button" id="cboxClose_bottom_danran3" class="close_btn_area">
+                            <div class="square_btn">閉じる</div>
+                        </button>
+                    </div>
+                </div>
+                <!-- vol.15 -->
+                <div id="danran4" class="danran">
+                    <img class="pc" src="images/danran/danran_15.jpg" alt="danran_vol_15 4ページ">
+                    <img class="sp" style="margin-bottom: 20px;" src="images/danran/danran_15_s1.jpg" alt="danran_vol_15 4ページ">
+                    <img class="sp" src="images/danran/danran_15_s2.jpg" alt="danran_vol_15 4ページ">
+                    <div>
+                        <button type="button" id="cboxClose_bottom_danran4" class="close_btn_area">
+                            <div class="square_btn">閉じる</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
     <!-- ページトップ -->
     <p id="pageTop"><a href="#">ページ<br>TOP</a></p>
 
@@ -583,6 +632,16 @@
     <script>
         AOS.init();
         // モーダル関係
+        $(document).ready(function(){
+            $(".inline").colorbox({
+                inline:true,
+                width:"100%"
+            });
+            // HTMLで指定したIDの要素をクリックするとColorBoxウィンドウが閉じます。
+            $("#cboxClose_bottom,#cboxClose_bottom_danran1,#cboxClose_bottom_danran2,#cboxClose_bottom_danran3,#cboxClose_bottom_danran4").click(function(){
+                parent.$.fn.colorbox.close(); return false;
+            });
+        });
         $(function() {
             $(".iframe").colorbox({
                 iframe:true,
@@ -599,6 +658,7 @@
                     nextArrow: '<img src="images/btn/next-arrow.png" class="slide-arrow next-arrow">',
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                    waitForAnimate: true,
                     responsive: [
                         {
                             breakpoint: 480,

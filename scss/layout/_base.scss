@@ -63,7 +63,7 @@ body{
 	}
 }
 img{
-	pointer-events: none;
+	// pointer-events: none;
 	user-drag: none;
 	-webkit-user-drag: none;
 	-moz-user-select: none;
@@ -167,6 +167,11 @@ img{
 	margin-bottom : 2.5vh !important;
 	@include mq(tb){
 		margin-bottom: 5vh !important;
+	}
+	&.-s_5{
+		@include mq(sp){
+			margin-bottom: 5vh !important;
+		}
 	}
 }
 .l-mgb_10{

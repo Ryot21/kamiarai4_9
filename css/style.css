@@ -121,7 +121,6 @@ body {
 }
 
 img {
-  pointer-events: none;
   user-drag: none;
   -webkit-user-drag: none;
   -moz-user-select: none;
@@ -244,6 +243,11 @@ img {
     margin-bottom: 5vh !important;
   }
 }
+@media screen and (max-width: 768px) {
+  .l-mgb_5.-s_5 {
+    margin-bottom: 5vh !important;
+  }
+}
 
 .l-mgb_10 {
   margin-bottom: 8vh !important;
@@ -354,6 +358,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  z-index: 9999;
 }
 
 .l-btnImg {
@@ -2068,7 +2073,7 @@ img {
 .owner-slider .prev-arrow {
   position: absolute;
   top: -9%;
-  left: 0%;
+  left: 1%;
 }
 @media screen and (min-width: 767px) {
   .owner-slider .prev-arrow {
@@ -2084,7 +2089,7 @@ img {
 @media screen and (min-width: 767px) {
   .owner-slider .next-arrow {
     top: -8%;
-    left: 5%;
+    left: 6%;
   }
 }
 
@@ -2225,6 +2230,11 @@ img {
 }
 .l-text.-size3L {
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .l-text.-size3L.-s20 {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 768px) {
   .l-text.-size3L.-s30 {
@@ -2642,6 +2652,25 @@ img {
   height: 100%;
 }
 
+.danran {
+  margin: auto;
+  text-align: center;
+}
+@media screen and (min-width: 767px) {
+  .danran {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .danran {
+    width: 60vw;
+  }
+}
+
+.paper_1 {
+  width: 50%;
+}
+
 .l-tabs--area {
   text-align: center;
 }
@@ -2761,6 +2790,64 @@ img {
   border: 1px solid #333333;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.inline_modal {
+  display: none;
+}
+
+#inline_content {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #cboxClose {
+    top: -16px !important;
+    right: -12px !important;
+    transform: scale(0.5, 0.5);
+  }
+}
+
+.close_btn_area {
+  text-align: left;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .close_btn_area {
+    transform: scale(0.6, 0.6);
+  }
+}
+
+.square_btn {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 30px;
+  background: #E9E9E9;
+  line-height: 2.1;
+  padding-left: 5px;
+}
+@media screen and (min-width: 767px) {
+  .square_btn {
+    line-height: 2.3;
+  }
+}
+.square_btn::before, .square_btn::after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  right: 15%;
+  width: 1.5px;
+  height: 15px;
+  /* border-radius: 50%; */
+  background: #000;
+}
+.square_btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.square_btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .border-btm {

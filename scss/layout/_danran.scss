@@ -1,0 +1,13 @@
+.danran{
+    margin: auto;
+    text-align: center;
+    @include mq(tb){
+        width: 90vw;
+    }
+    @include mq(pc){
+        width: 60vw;
+    }
+}
+.paper_1{
+    width: 50%;
+}
