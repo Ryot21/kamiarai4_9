@@ -181,6 +181,11 @@ img{
 			margin-bottom: 1vh !important;
 		}
 	}
+	&.-s_3{
+		@include mq(sp){
+			margin-bottom: 3vh !important;
+		}
+	}
 	&.-s_5{
 		@include mq(sp){
 			margin-bottom: 5vh !important;
