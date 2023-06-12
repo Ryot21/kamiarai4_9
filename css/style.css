@@ -229,6 +229,11 @@ img {
     margin-bottom: 1vh !important;
   }
 }
+@media screen and (max-width: 768px) {
+  .l-mgb_3.-s_4 {
+    margin-bottom: 4vh !important;
+  }
+}
 @media screen and (min-width: 767px) {
   .l-mgb_3 {
     margin-bottom: 3vh !important;
@@ -241,6 +246,11 @@ img {
 @media screen and (min-width: 767px) {
   .l-mgb_5 {
     margin-bottom: 5vh !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .l-mgb_5.-s_1 {
+    margin-bottom: 1vh !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2864,6 +2874,57 @@ img {
   border-bottom: 1px solid black;
 }
 
+#p-setsubi .swiper-title {
+  position: relative;
+}
+#p-setsubi .swiper-title .balloon2 {
+  position: absolute;
+  top: 33%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 19%;
+  height: auto;
+}
+@media screen and (min-width: 767px) {
+  #p-setsubi .swiper-title .balloon2 {
+    top: 30%;
+    width: 15%;
+    max-width: 150px;
+  }
+}
+#p-setsubi .swiper-title .balloon3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 19%;
+  height: auto;
+}
+@media screen and (min-width: 767px) {
+  #p-setsubi .swiper-title .balloon3 {
+    width: 15%;
+    max-width: 150px;
+  }
+}
+#p-setsubi .border-bottom {
+  width: 85vw;
+  max-width: 1260px;
+  margin: 0 auto 4vh;
+  border-bottom: 1px solid black;
+}
+@media screen and (min-width: 767px) {
+  #p-setsubi .border-bottom {
+    width: 70vw;
+    margin: 0 auto 12vh;
+  }
+}
+#p-setsubi .border-bottom.-s {
+  margin: 0 auto 6vh;
+}
+#p-setsubi .border-bottom.-last {
+  margin: 0 auto;
+}
+
 .l-testBg {
   width: 100%;
   height: 4483px;
@@ -4921,6 +4982,174 @@ header {
 }
 #pageTop.DownMove {
   animation: DownAnime 0.5s forwards;
+}
+
+.swiperArea {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+@media screen and (min-width: 767px) {
+  .swiperArea .swiper-container {
+    padding: 0 40px;
+  }
+}
+.swiperArea .swiper-container.card-swiper {
+  margin-bottom: 80px;
+}
+.swiperArea .swiper-container.card-swiper:last-child {
+  margin-bottom: 80px;
+}
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next,
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev {
+  width: 45px; /* 背景画像の幅を必ず指定 */
+  height: 45px; /* 背景画像の高さを必ず指定 */
+  transform: translateY(-50%);
+  background: gray;
+  border: 1px solid white;
+  border-radius: 50%;
+  opacity: 1;
+  transition: all 0.5s;
+  z-index: 6 !important;
+}
+@media screen and (max-width: 768px) {
+  .swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next,
+  .swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev {
+    top: auto !important;
+    bottom: 4.5vh;
+    transform: scale(0.5, 0.5);
+  }
+}
+@media screen and (min-width: 767px) {
+  .swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next,
+  .swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev {
+    top: 50%;
+  }
+}
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next::after,
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev::after {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: ""; /* 空指定してデフォルトの矢印を消す */
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next:hover,
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 768px) {
+  .swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev {
+    left: 19px;
+  }
+}
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-prev::after {
+  border-width: 11px 14px 11px 0;
+  border-color: transparent #fff transparent transparent;
+  right: 25%;
+}
+@media screen and (max-width: 768px) {
+  .swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next {
+    right: 19px;
+  }
+}
+.swiperArea .swiper-container.card-swiper.-sliderItem02 .swiper-button-next::after {
+  border-width: 11px 0 11px 14px;
+  border-color: transparent transparent transparent #fff;
+  left: 55%;
+}
+.swiperArea .swiper-container .swiper-pagination {
+  bottom: 4.5%;
+  z-index: 5 !important;
+}
+@media screen and (min-width: 767px) {
+  .swiperArea .swiper-container .swiper-pagination {
+    bottom: 10%;
+  }
+}
+.swiperArea .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background: #6D0000;
+}
+.swiperArea .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  transition: 0.5s all;
+}
+@media screen and (min-width: 767px) {
+  .swiperArea .swiper-container .swiper-pagination .swiper-pagination-bullet {
+    width: 0.8vw;
+    height: 0.8vw;
+    margin: 0 0.8vw;
+  }
+}
+.swiperArea .swiper-container .swiper-pagination .swiper-pagination-bullet:hover {
+  background: rgba(109, 0, 0, 0.4235294118);
+}
+.swiperArea .swiper-container.thumbnail {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .swiperArea .swiper-container.thumbnail .swiper-wrapper {
+    justify-content: space-between;
+  }
+}
+.swiperArea .swiper-container.thumbnail .swiper-slide.s-item {
+  width: calc(33.3333% - 5px) !important;
+  height: auto;
+  padding: 0 2.5px;
+  margin-bottom: 5px;
+}
+.swiperArea .swiper-container.thumbnail .swiper-slide.s-item img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .g-sliderBox01 .swiper-pagination {
+    bottom: 49.7% !important;
+  }
+}
+
+.swiper-title {
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 767px) {
+  .swiper-title {
+    width: 85%;
+  }
+}
+
+.card {
+  width: 365px;
+  height: auto;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-L {
+  width: 95%;
+  max-width: 1260px;
+  height: auto;
+  margin: auto;
+}
+.card-L img {
+  width: 100%;
+  height: auto;
+}
+
+.washatendArea {
+  margin: 0 auto 90px;
+}
+
+.thumbnail .swiper-slide {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.thumbnail .swiper-slide-thumb-active {
+  opacity: 1;
 }
 
 @keyframes fadein {
