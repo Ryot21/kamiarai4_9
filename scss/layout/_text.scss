@@ -483,4 +483,22 @@
             }
         }
     }
+    // アイコン
+    &.iconTitle{
+        position: relative;
+        padding-left: 2.5vw;
+        .icon{
+            position: absolute;
+            top: 50%;
+            left: -3.5%;
+            transform: translateY(-50%);
+            width: 5vw;
+            height: 5vw;
+            @include mq(tb){
+                left: 0;
+                width: 1.8vw;
+                height: 1.8vw;
+            }
+        }
+    }
 }

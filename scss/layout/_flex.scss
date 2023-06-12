@@ -19,6 +19,9 @@
 				flex-wrap: nowrap;
 				justify-content: space-between;
 			}
+			&.-center{
+				justify-content: center;
+			}
 			.flexItem{
 				width: 100%;
 				@include mq(tb){
@@ -72,6 +75,11 @@
 							width: 47%;
 						}
 					}
+				}
+			}
+			&.-mapArea{
+				@include mq(sp){
+					margin: 0 1vw;
 				}
 			}
 		}
