@@ -314,6 +314,22 @@
 				}
 			}
 		}
+		&.-f-PABM-btn{
+			display: flex;
+			flex-wrap: wrap;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 50%;
+				margin: 0 3px;
+				@include mq(tb){
+					width: 25%;
+					margin: 0 5px;
+				}
+			}
+		}
 
 
 
