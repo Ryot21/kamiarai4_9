@@ -550,6 +550,10 @@ img {
     margin: auto;
   }
 }
+.l-contents.-img-bg .l-contentsBox.-topView_text {
+  bottom: 0;
+  left: 0;
+}
 .l-contents.-img-bg .l-contentsBox.-kukaku, .l-contents.-img-bg .l-contentsBox.-location-trainBox, .l-contents.-img-bg .l-contentsBox.-builtPlanText, .l-contents.-img-bg .l-contentsBox.-text {
   top: 50%;
   left: 50%;
