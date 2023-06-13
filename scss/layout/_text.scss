@@ -23,6 +23,16 @@
     &.-lh-25{
         line-height: 2.5;
     }
+    &.-lh-2_s{
+        @include mq(sp){
+            line-height: 2;
+        }
+    }
+    &.-lh-4_s{
+        @include mq(sp){
+            line-height: 4;
+        }
+    }
     &.-lts-2{
         @include mq(tb){
             letter-spacing: 2px;
@@ -56,13 +66,27 @@
                     font-size: clamp(10px, 1vw, 16px);
                 }
             }
+            &.-s11{
+                @include mq(sp){
+                    font-size: 11px;
+                }
+            }
+            &.-s16{
+                @include mq(sp){
+                    font-size: 16px;
+                }
+            }
         }
         &.-sizeL{//24px
             font-size: 18px;
             @include mq(tb){
                 font-size: clamp(10px, 1.8vw, 24px);
             }
-
+            &.-s14{
+                @include mq(sp){
+                    font-size: 14px;
+                }
+            }
             &.-s15{
                 @include mq(sp){
                     font-size: 15px;
@@ -477,8 +501,8 @@
             content: "・・・・";
             position: absolute;
             top: -46%;
-            left: 7.6%;
-            font-size: 7.5vw;
+            left: 17.6%;
+            font-size: 7.3vw;
             @include mq(tb){
                 top: -54%;
                 left: 18%;

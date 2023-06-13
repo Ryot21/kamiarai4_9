@@ -10,6 +10,24 @@
 				flex-direction: row-reverse;
 			}
 		}
+		.flexItem{
+			&.-youtubeBox{
+				padding: 0 5vw;
+				@include mq(tb){
+					padding: 0 1.5vw;
+				}
+				&.-left{
+					@include mq(tb){
+						padding: 0 1.5vw 0 0;
+					}
+				}
+				&.-right{
+					@include mq(tb){
+						padding: 0 0 0 1.5vw;
+					}
+				}
+			}
+		}
 		&.-f01{
 			display: flex;
 			@include mq(sp){
@@ -65,6 +83,38 @@
 							content:"03";
 						}
 					}
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+				}
+			}
+			&.-mapArea{
+				@include mq(sp){
+					margin: 0 1vw;
+				}
+			}
+		}
+		&.-f04{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 25%;
+					margin: 0 10px;
 				}
 				&--text{
 					// @include mq(tb){
