@@ -488,6 +488,9 @@ img {
   .-w93-s {
     width: 93% !important;
   }
+  .-w93-s.is-fixed {
+    width: 94% !important;
+  }
 }
 
 .l-contents {
@@ -995,15 +998,23 @@ img {
     justify-content: space-around;
   }
 }
-.l-flex--area .l-flex--contents.-f-PABM-btn .flexItem {
-  width: 50%;
-  margin: 0 3px;
+@media screen and (max-width: 768px) {
+  .l-flex--area .l-flex--contents.-f-PABM-btn .flexItem {
+    width: 48%;
+    margin: 0 3px;
+  }
 }
 @media screen and (min-width: 767px) {
   .l-flex--area .l-flex--contents.-f-PABM-btn .flexItem {
     width: 25%;
     margin: 0 5px;
   }
+}
+.l-flex--area .l-flex--contents.-f-PABM-btn .flexItem.-left {
+  margin: 0 5px 0 0;
+}
+.l-flex--area .l-flex--contents.-f-PABM-btn .flexItem.-right {
+  margin: 0 0 0 5px;
 }
 .l-flex--area .l-flex--contents.-setsubi-itemArea_sp {
   display: flex;
@@ -1772,6 +1783,28 @@ img {
     transform: scale(0.95);
   }
 }
+.l-linkImg.-PABM {
+  display: block;
+  position: relative;
+  transition: 0.8s all;
+  opacity: 0.8;
+}
+.l-linkImg.-PABM.-parkBtn::before {
+  background: linear-gradient(180deg, #1687ed, #14375a);
+}
+.l-linkImg.-PABM.-amusementBtn::before {
+  background: linear-gradient(180deg, #1ab1a7, #155854);
+}
+.l-linkImg.-PABM.-ballParkBtn::before {
+  background: linear-gradient(180deg, #29ABE2, #1f6f92);
+}
+.l-linkImg.-PABM.-museumBtn::before {
+  background: linear-gradient(180deg, #43BF7B, #247046);
+}
+.l-linkImg.-PABM:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
 .l-linkImg.-contact {
   display: block;
   transform: scale(1);
@@ -2194,6 +2227,11 @@ img {
 @media screen and (min-width: 767px) {
   .l-text.-sizeLL {
     font-size: clamp(10px, 2.5vw, 28px);
+  }
+}
+@media screen and (min-width: 767px) {
+  .l-text.-sizeLL.-v02 {
+    font-size: clamp(10px, 2.5vw, 26px);
   }
 }
 @media screen and (max-width: 768px) {

@@ -50,7 +50,7 @@
         })(document);
     </script>
 </head>
-<body id="" class="js_humburgerClose">
+<body id="p-location" class="js_humburgerClose">
 
     <div id="all">
         <header class="l-header -w1200 l-mgb_3">
@@ -254,29 +254,109 @@
                 <p class="l-text -size10 -right">各施設の詳細を表示できます。</p>
             </div>
 
-
-
-            <!-- タブエリア -->
-            <div class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
-                <div class="l-flex--area">
+            <!-- ボタンエリア -->
+            <div id="scroll-btnArea" class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
+                <div class="l-flex--area is-fixed">
                     <div class="l-flex--contents -f-PABM-btn">
-                        <div class="flexItem">
-                            <a class="l-linkImg -PABM" href=""><img src="images/btn/park_btn_new.jpg" alt=""></a>
+                        <div class="flexItem -left">
+                            <a class="l-linkImg -PABM -parkBtn" href="#park">
+                                <img src="images/btn/park_btn_new.jpg" alt="パークボタン">
+                            </a>
                         </div>
                         <div class="flexItem">
-                            <a class="l-linkImg -PABM" href=""><img src="images/btn/amusement_btn_new.jpg" alt=""></a>
+                            <a class="l-linkImg -PABM -ballParkBtn" href="#ballPark">
+                                <img src="images/btn/ballPark_btn_new.jpg" alt="ボールパークボタン">
+                            </a>
                         </div>
                         <div class="flexItem">
-                            <a class="l-linkImg -PABM" href=""><img src="images/btn/ballPark_btn_new.jpg" alt=""></a>
+                            <a class="l-linkImg -PABM -amusementBtn" href="#amusement">
+                                <img src="images/btn/amusement_btn_new.jpg" alt="アミューズメントボタン">
+                            </a>
                         </div>
-                        <div class="flexItem">
-                            <a class="l-linkImg -PABM" href=""><img src="images/btn/museum_btn_new.jpg" alt=""></a>
+                        <div class="flexItem -right">
+                            <a class="l-linkImg -PABM -museumBtn" href="#museum">
+                                <img src="images/btn/museum_btn_new.jpg" alt="ミュージアムボタン">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
+                <!-- 所沢航空記念公園エリア -->
+                <div id="park" class="l-contents -img-bg">
+                    <div class="imgBox">
+                        <img class="pc" src="images/bg/parkArea-bg.png" alt="日本における航空発祥の地 間近で見る飛行機は迫力満点！">
+                        <img class="sp" src="images/bg/parkArea-bg_s.jpg" alt="日本における航空発祥の地 間近で見る飛行機は迫力満点！">
+                    </div>
+                </div>
+                <!-- ベルーナドームエリア -->
+                <div id="ballPark" class="l-contents -img-bg">
+                    <div class="imgBox">
+                        <img class="pc" src="images/bg/ballParkArea-bg.png" alt="狭山丘陵の中にあるライオンズの本拠地 全周に壁のないアウトドア感覚のドーム球場！">
+                        <img class="sp" src="images/bg/ballParkArea-bg_s.jpg" alt="狭山丘陵の中にあるライオンズの本拠地 全周に壁のないアウトドア感覚のドーム球場！">
+                    </div>
+                </div>
+                <!-- アミューズメントエリア -->
+                <div id="amusement" class="l-contents -img-bg">
+                    <div class="imgBox">
+                        <img class="pc" src="images/bg/amusementArea-bg.png" alt="タイムスリップ気分を楽しもう 昭和レトロな遊園地にびっくり!">
+                        <img class="sp" src="images/bg/amusementArea-bg_s.jpg" alt="タイムスリップ気分を楽しもう 昭和レトロな遊園地にびっくり!">
+                    </div>
+                </div>
+                <!-- 美術館エリア -->
+                <div id="museum" class="l-contents -img-bg">
+                    <div class="imgBox">
+                        <img class="pc" src="images/bg/museumArea-bg.png" alt="ところざわサクラタウンのランドマーク ユニークな建築物が美しい。フォトスポット満載の複合型施設">
+                        <img class="sp" src="images/bg/museumArea-bg_s.jpg" alt="ところざわサクラタウンのランドマーク ユニークな建築物が美しい。フォトスポット満載の複合型施設">
+                    </div>
+                </div>
+            </div>
 
-            <!--// 工事中 -->
+            <!-- ファーストビュー > Access -->
+            <div class="l-contents -img-bg -w1200 l-mgb_10 -s_5">
+                <div class="imgBox">
+                    <img class="sp" src="images/pic/location-view02_s-min.jpg" alt="">
+                    <img class="pc" src="images/pic/location-view02-min.jpg" alt="">
+                </div>
+                <div class="l-contentsBox -topView_text">
+                    <h2 class="l-text -size4L -family04 -white -left -lh-1">Access</h2>
+                </div>
+            </div>
+            <div class="l-contents -textArea -w1200 l-mgb_10 -s_5">
+                <h2 class="pc l-text -sizeLL -v02 -site-c -family01 -left l-mgb_1">
+                    通勤通学での利便は勿論、多くの都市へ繋がる「小手指」駅まで徒歩9～10分。<br class="pc">
+                    「池袋」駅へダイレクトアクセス、都心の主要拠点へスマートにつながる歓びを実感する住環境ー
+                </h2>
+                <h2 class="sp l-text -sizeLL -v02 -site-c -family01 -left l-mgb_1">
+                    ｢池袋｣駅へダイレクトアクセス、<br>都心の主要拠点へスマートにつながる歓びを実感する住環境―
+                </h2>
+            </div>
+            <!-- 路線 -->
+            <div class="l-contents -img-bg -w1200 l-mgb_10 -s_5">
+                <div class="imgBox">
+                    <img class="sp" src="images/bg/location-train_bg_s.jpg" alt="">
+                    <img class="pc" src="images/bg/location-train_bg-min.jpg" alt="">
+                </div>
+                <div class="l-contentsBox -text">
+                    <img class="pc" src="images/SVG/location-train_text.svg" alt="">
+                </div>
+            </div>
+            <!-- 都心に出やすく～ -->
+            <div class="l-contents -textArea -w1200 -w93-s l-mgb_10 -s_5">
+                <div class="l-flex--area">
+                    <div class="l-flex--contents -flexContent__box02">
+                        <div class="flexItem l-mgb_1_s">
+                            <img class="" src="images/SVG/logo.svg" alt="">
+                        </div>
+                        <div class="flexItem">
+                            <p class="l-text -sizeL -s15 -family01 -lh-2 -left">
+                                都心に出やすく、自然豊かな「所沢」を住みこなす―。<br class="pc">
+                                始発利用の｢小手指｣駅という選択。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -468,6 +548,27 @@
             $("#cboxClose_bottom,#cboxClose_bottom_danran1,#cboxClose_bottom_danran2,#cboxClose_bottom_danran3,#cboxClose_bottom_danran4").click(function(){
                 parent.$.fn.colorbox.close(); return false;
             });
+            // スクロールに合わせて追従
+            // $(function() {
+            //     var $fixElement = $('#scroll-btnArea'); // 追従する要素
+            //     var baseFixPoint = $fixElement.offset().top; // 追従する要素の初期位置
+            //     var fixClass = 'is-fixed'; // 追従時に付与するclass
+            
+            //     // 要素が追従する処理
+            //     function fixFunction() {
+            //         var windowScrolltop = $(window).scrollTop();
+            //         // スクロールが初期位置を通過しているとき
+            //         if(windowScrolltop >= baseFixPoint) {
+            //             $fixElement.addClass(fixClass);
+            //         } else {
+            //             $fixElement.removeClass(fixClass);
+            //         }
+            //     }
+            
+            //     $(window).on('load scroll', function() {
+            //         fixFunction();
+            //     });
+            // });
         });
         $(function() {
             $(".iframe").colorbox({

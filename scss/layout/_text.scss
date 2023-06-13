@@ -80,6 +80,12 @@
             @include mq(tb){
                 font-size: clamp(10px, 2.5vw, 28px);
             }
+            &.-v02{
+                @include mq(tb){
+                    font-size: clamp(10px, 2.5vw, 26px);
+                }
+            }
+
             &.-s27{
                 @include mq(sp){
                     font-size: 27px;

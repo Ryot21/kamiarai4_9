@@ -20,6 +20,9 @@
 .-w93-s{
 	@include mq(sp){
 		width: 93% !important;
+		&.is-fixed{
+			width: 94% !important;
+		}
 	}
 }
 
