@@ -1,34 +1,25 @@
 #p-location{
 
     // #scroll-btnArea{
-    .is-fixed{
-//         width: 100%;
-//         height: auto;
-//         max-width: 1200px;
-//         background: white;
-//         border-bottom: 1px solid white;
-//         // transition: .8s all;
-
-//         position: -webkit-sticky;
-// position: sticky;
-// top: 0;
-// z-index: 9999;
-//         &.is-fixed{
-//             position: fixed;
-//             top: 0;
-//             left: 50%;
-//             transform: translateX(-50%);
-//             z-index: 9999;
-//             border-bottom: 1px solid gray;
-//             @include mq(sp){
-//                 padding-top: 1vh;
-//             }
-//             &.none {
-//                 opacity: 0;
-//                 z-index: -1;
-//             }
-//         }
-
-
+    #tab-header{
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.745);
+        &.UpMove{
+            animation: UpAnime 0.5s forwards;
+            height: auto;
+            width:100%;
+        }
+        &.DownMove{
+            animation: DownAnime 0.5s forwards;
+                        height: auto;
+                        width:100%;
+            
+        }
+    }
+    #park,#ballPark,#amusement,#museum{
+        z-index: -1;
     }
 }

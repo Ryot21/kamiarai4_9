@@ -23,6 +23,7 @@
     <script src="js/aos.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/pagetop.js"></script>
+    <script src="js/fixed.js"></script>
 
 
     <!-- Global site tag (gtag.js) - Google Analytics --> 
@@ -255,65 +256,91 @@
             </div>
 
             <!-- ボタンエリア -->
-            <div id="scroll-btnArea" class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
-                <div class="l-flex--area is-fixed">
-                    <div class="l-flex--contents -f-PABM-btn">
-                        <div class="flexItem -left">
-                            <a class="l-linkImg -PABM -parkBtn" href="#park">
-                                <img src="images/btn/park_btn_new.jpg" alt="パークボタン">
-                            </a>
+                <!-- <div class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
+                    <div class="l-flex--area">
+                        <div class="l-flex--contents -f-PABM-btn">
+                            <div class="flexItem -left">
+                                <a class="l-linkImg -PABM -parkBtn" href="#park">
+                                    <img src="images/btn/park_btn_new.jpg" alt="パークボタン">
+                                </a>
+                            </div>
+                            <div class="flexItem">
+                                <a class="l-linkImg -PABM -ballParkBtn" href="#ballPark">
+                                    <img src="images/btn/ballPark_btn_new.jpg" alt="ボールパークボタン">
+                                </a>
+                            </div>
+                            <div class="flexItem">
+                                <a class="l-linkImg -PABM -amusementBtn" href="#amusement">
+                                    <img src="images/btn/amusement_btn_new.jpg" alt="アミューズメントボタン">
+                                </a>
+                            </div>
+                            <div class="flexItem -right">
+                                <a class="l-linkImg -PABM -museumBtn" href="#museum">
+                                    <img src="images/btn/museum_btn_new.jpg" alt="ミュージアムボタン">
+                                </a>
+                            </div>
                         </div>
-                        <div class="flexItem">
-                            <a class="l-linkImg -PABM -ballParkBtn" href="#ballPark">
-                                <img src="images/btn/ballPark_btn_new.jpg" alt="ボールパークボタン">
-                            </a>
+                    </div>
+                </div> -->
+                <div id="tab-header" class="l-contents -w1200 -w93-s">
+                    <div class="l-flex--area">
+                        <div class="l-flex--contents -f-PABM-btn">
+                            <div class="flexItem -left">
+                                <a class="l-linkImg -PABM -parkBtn" href="#park">
+                                    <img src="images/btn/park_btn_new.jpg" alt="パークボタン">
+                                </a>
+                            </div>
+                            <div class="flexItem">
+                                <a class="l-linkImg -PABM -ballParkBtn" href="#ballPark">
+                                    <img src="images/btn/ballPark_btn_new.jpg" alt="ボールパークボタン">
+                                </a>
+                            </div>
+                            <div class="flexItem">
+                                <a class="l-linkImg -PABM -amusementBtn" href="#amusement">
+                                    <img src="images/btn/amusement_btn_new.jpg" alt="アミューズメントボタン">
+                                </a>
+                            </div>
+                            <div class="flexItem -right">
+                                <a class="l-linkImg -PABM -museumBtn" href="#museum">
+                                    <img src="images/btn/museum_btn_new.jpg" alt="ミュージアムボタン">
+                                </a>
+                            </div>
                         </div>
-                        <div class="flexItem">
-                            <a class="l-linkImg -PABM -amusementBtn" href="#amusement">
-                                <img src="images/btn/amusement_btn_new.jpg" alt="アミューズメントボタン">
-                            </a>
+                    </div>
+                </div>
+                <div class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
+                    <!-- 所沢航空記念公園エリア -->
+                    <div id="park" class="l-contents -img-bg">
+                        <div class="imgBox">
+                            <img class="pc" src="images/bg/parkArea-bg.png" alt="日本における航空発祥の地 間近で見る飛行機は迫力満点！">
+                            <img class="sp" src="images/bg/parkArea-bg_s.jpg" alt="日本における航空発祥の地 間近で見る飛行機は迫力満点！">
                         </div>
-                        <div class="flexItem -right">
-                            <a class="l-linkImg -PABM -museumBtn" href="#museum">
-                                <img src="images/btn/museum_btn_new.jpg" alt="ミュージアムボタン">
-                            </a>
+                    </div>
+                    <!-- ベルーナドームエリア -->
+                    <div id="ballPark" class="l-contents -img-bg">
+                        <div class="imgBox">
+                            <img class="pc" src="images/bg/ballParkArea-bg.png" alt="狭山丘陵の中にあるライオンズの本拠地 全周に壁のないアウトドア感覚のドーム球場！">
+                            <img class="sp" src="images/bg/ballParkArea-bg_s.jpg" alt="狭山丘陵の中にあるライオンズの本拠地 全周に壁のないアウトドア感覚のドーム球場！">
+                        </div>
+                    </div>
+                    <!-- アミューズメントエリア -->
+                    <div id="amusement" class="l-contents -img-bg">
+                        <div class="imgBox">
+                            <img class="pc" src="images/bg/amusementArea-bg.png" alt="タイムスリップ気分を楽しもう 昭和レトロな遊園地にびっくり!">
+                            <img class="sp" src="images/bg/amusementArea-bg_s.jpg" alt="タイムスリップ気分を楽しもう 昭和レトロな遊園地にびっくり!">
+                        </div>
+                    </div>
+                    <!-- 美術館エリア -->
+                    <div id="museum" class="l-contents -img-bg">
+                        <div class="imgBox">
+                            <img class="pc" src="images/bg/museumArea-bg.png" alt="ところざわサクラタウンのランドマーク ユニークな建築物が美しい。フォトスポット満載の複合型施設">
+                            <img class="sp" src="images/bg/museumArea-bg_s.jpg" alt="ところざわサクラタウンのランドマーク ユニークな建築物が美しい。フォトスポット満載の複合型施設">
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="l-contents -w1200 -w93-s l-mgb_10 -s_5">
-                <!-- 所沢航空記念公園エリア -->
-                <div id="park" class="l-contents -img-bg">
-                    <div class="imgBox">
-                        <img class="pc" src="images/bg/parkArea-bg.png" alt="日本における航空発祥の地 間近で見る飛行機は迫力満点！">
-                        <img class="sp" src="images/bg/parkArea-bg_s.jpg" alt="日本における航空発祥の地 間近で見る飛行機は迫力満点！">
-                    </div>
-                </div>
-                <!-- ベルーナドームエリア -->
-                <div id="ballPark" class="l-contents -img-bg">
-                    <div class="imgBox">
-                        <img class="pc" src="images/bg/ballParkArea-bg.png" alt="狭山丘陵の中にあるライオンズの本拠地 全周に壁のないアウトドア感覚のドーム球場！">
-                        <img class="sp" src="images/bg/ballParkArea-bg_s.jpg" alt="狭山丘陵の中にあるライオンズの本拠地 全周に壁のないアウトドア感覚のドーム球場！">
-                    </div>
-                </div>
-                <!-- アミューズメントエリア -->
-                <div id="amusement" class="l-contents -img-bg">
-                    <div class="imgBox">
-                        <img class="pc" src="images/bg/amusementArea-bg.png" alt="タイムスリップ気分を楽しもう 昭和レトロな遊園地にびっくり!">
-                        <img class="sp" src="images/bg/amusementArea-bg_s.jpg" alt="タイムスリップ気分を楽しもう 昭和レトロな遊園地にびっくり!">
-                    </div>
-                </div>
-                <!-- 美術館エリア -->
-                <div id="museum" class="l-contents -img-bg">
-                    <div class="imgBox">
-                        <img class="pc" src="images/bg/museumArea-bg.png" alt="ところざわサクラタウンのランドマーク ユニークな建築物が美しい。フォトスポット満載の複合型施設">
-                        <img class="sp" src="images/bg/museumArea-bg_s.jpg" alt="ところざわサクラタウンのランドマーク ユニークな建築物が美しい。フォトスポット満載の複合型施設">
-                    </div>
-                </div>
-            </div>
 
             <!-- ファーストビュー > Access -->
-            <div class="l-contents -img-bg -w1200 l-mgb_10 -s_5">
+            <div id="area-2" class="l-contents -img-bg -w1200 l-mgb_10 -s_5">
                 <div class="imgBox">
                     <img class="sp" src="images/pic/location-view02_s-min.jpg" alt="">
                     <img class="pc" src="images/pic/location-view02-min.jpg" alt="">

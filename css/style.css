@@ -3042,6 +3042,27 @@ img {
   margin: 0 auto;
 }
 
+#p-location #tab-header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.745);
+}
+#p-location #tab-header.UpMove {
+  animation: UpAnime 0.5s forwards;
+  height: auto;
+  width: 100%;
+}
+#p-location #tab-header.DownMove {
+  animation: DownAnime 0.5s forwards;
+  height: auto;
+  width: 100%;
+}
+#p-location #park, #p-location #ballPark, #p-location #amusement, #p-location #museum {
+  z-index: -1;
+}
+
 .l-testBg {
   width: 100%;
   height: 4483px;
@@ -5275,5 +5296,25 @@ header {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes UpAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+@keyframes DownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */
